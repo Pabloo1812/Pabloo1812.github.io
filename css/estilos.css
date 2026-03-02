@@ -12,7 +12,7 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     color: #000000;
-    background-color: #e6f5e7;
+    background-color: #dbf1dd;
     position: relative;
     overflow-x: hidden;
 }
@@ -24,8 +24,9 @@ body::before {
     top: 50%;
     left: 50%;
 
-    width: 100vw;
-    height: 100px;
+    /* 🔥 suficientemente largo para cubrir esquinas */
+    width: 200vmax;
+    height: 120px;
 
     transform: translate(-50%, -50%) rotate(0deg);
 
@@ -33,14 +34,14 @@ body::before {
         to right,
         transparent 0%,
         rgba(1, 75, 1, 0.39) 20%,
-        rgba(1, 75, 1, 0.445) 50%,
+        rgba(1, 75, 1, 0.356) 50%,
         rgba(1, 75, 1, 0.39) 80%,
         transparent 100%
     );
 
     filter: blur(40px);
 
-    animation: girarLinea 20s linear infinite;
+    animation: girarLinea 15s linear infinite;
 
     pointer-events: none;
     z-index: -1;
