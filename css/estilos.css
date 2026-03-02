@@ -9,16 +9,55 @@
 
 body {
     padding-top: 75px;
-    background-color: #e6f5e7;  
-    color: #000000;           
-    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+    background-color: #e6f5e7;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    width: 300vw;
+    height: 150px;
+
+    transform: translate(-50%, -50%) rotate(0deg);
+
+    background: linear-gradient(
+        to right,
+        transparent 0%,
+        rgba(0, 80, 0, 0.0) 20%,
+        rgba(1, 75, 1, 0.233) 50%,
+        rgba(0, 80, 0, 0.0) 80%,
+        transparent 100%
+    );
+
+    filter: blur(40px);
+
+    animation: girarLinea 20s linear infinite;
+
+    pointer-events: none;
+    z-index: -1;
+}
+
+@keyframes girarLinea {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
 }
 
 .carousel {
     max-width: 700px;
     margin: 40px auto;
-    background-color: #e6f5e7;
     padding: 15px;
     border-radius: 12px;
 }
