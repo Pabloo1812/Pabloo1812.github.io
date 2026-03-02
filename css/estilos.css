@@ -33,7 +33,7 @@ body::before {
         to right,
         transparent 0%,
         rgba(0, 80, 0, 0.0) 20%,
-        rgba(1, 75, 1, 0.233) 50%,
+        rgba(1, 75, 1, 0.39) 50%,
         rgba(0, 80, 0, 0.0) 80%,
         transparent 100%
     );
@@ -81,3 +81,4 @@ h1, h2, h3 {
     text-align: center;
     margin-bottom: 20px;
 }
+
